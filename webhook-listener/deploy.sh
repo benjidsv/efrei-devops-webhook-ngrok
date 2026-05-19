@@ -21,7 +21,7 @@ else
 fi 
  
 echo "Installing dependencies..."
-cd "$DEPLOY_DIR" 
+cd "$DEPLOY_DIR\deployed-react-app" 
 npm install 
  
 echo "Stopping previous app (best-effort)..."
@@ -35,4 +35,10 @@ if npm run | grep -qE ' start'; then
   echo "Started with: npm run start"
 elif npm run | grep -qE ' dev'; then 
   # if we built our app with vite 
-  nohup npm run dev -- --host 0.0.0.0 > app.log 2>&1 &
+  nohup npm run dev -- --host 0.0.0.0 > app.log 2>&1 &echo "Started with: npm run dev"
+else 
+  echo "No start/dev script found in package.json" 
+  exit 1 
+fi 
+ 
+echo "== Deploy done =="
