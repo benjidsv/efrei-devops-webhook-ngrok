@@ -64,5 +64,3 @@ app.listen(port, () => {
   console.log(`Webhook listener on 
 http://localhost:${port}/webhook/github`); 
 });
-
-//commit
