@@ -21,7 +21,7 @@ else
 fi 
  
 echo "Installing dependencies..."
-cd "$DEPLOY_DIR\deployed-react-app" 
+cd "$DEPLOY_DIR" 
 npm install 
  
 echo "Stopping previous app (best-effort)..."

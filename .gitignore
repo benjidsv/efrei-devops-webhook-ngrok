@@ -1,0 +1,4 @@
+deployed-react-app/
+node_modules/
+.env
+*.log
